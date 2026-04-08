@@ -1,8 +1,20 @@
+const HERO_VIDEO = "https://pub-4714471fdc5144719a95bb3ae6a26f4e.r2.dev/Darker_Grainy_Still_Video_Generation.mp4";
+
 export default function Hero({ onJoinClick }: { onJoinClick: () => void }) {
   return (
     <section
-      className="h-screen flex flex-col justify-end relative bg-cover bg-center bg-no-repeat p-8 pb-8 md:p-[5rem_4rem] bg-[url('/hero-mobile-bg.jpg')] md:bg-[url('/hero-bg.jpg')]"
+      className="h-[80vh] md:h-screen flex flex-col justify-end relative bg-cover bg-center bg-no-repeat p-8 pb-8 md:p-[5rem_4rem] bg-[url('/hero-mobile-bg.jpg')] md:bg-[url('/hero-bg.jpg')]"
     >
+      {/* Desktop video background */}
+      <video
+        className="hidden md:block absolute inset-0 w-full h-full object-cover"
+        src={HERO_VIDEO}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
       <div className="absolute inset-0 bg-black/10" />
       <div className="relative flex flex-col items-start w-full md:w-[30rem]">
         <h1

@@ -20,6 +20,10 @@ const seasonMix = localFont({
 export const metadata: Metadata = {
   title: "StoryAmp",
   description: "Amplify your stories. Reach the world.",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#000000" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({
