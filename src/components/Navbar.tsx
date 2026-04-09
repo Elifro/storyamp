@@ -31,19 +31,10 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Log in — desktop only */}
-          <button className="hidden md:flex items-center gap-1.5 text-white/80 hover:text-white text-sm font-normal font-[family-name:var(--font-figtree)] transition-colors cursor-pointer px-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            Log in
-          </button>
-
-          {/* Join Waitlist — desktop only */}
+          {/* Join Waitlist — all screen sizes */}
           <button
             onClick={onJoinClick}
-            className="hidden md:block px-5 py-2 bg-white hover:bg-gray-100 text-black text-sm font-semibold font-[family-name:var(--font-figtree)] rounded-full transition-colors cursor-pointer"
+            className="px-5 py-2 bg-white hover:bg-gray-100 text-black text-sm font-semibold font-[family-name:var(--font-figtree)] rounded-full transition-colors cursor-pointer"
           >
             Join Waitlist
           </button>

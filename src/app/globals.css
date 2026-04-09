@@ -3,3 +3,8 @@
 @theme {
   --color-white: #ffffff;
 }
+
+@keyframes feature-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
