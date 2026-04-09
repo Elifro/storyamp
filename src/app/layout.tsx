@@ -1,11 +1,17 @@
-import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Figtree, EB_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
+});
+
+const ebGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const seasonMix = localFont({
@@ -20,10 +26,10 @@ const seasonMix = localFont({
 export const metadata: Metadata = {
   title: "StoryAmp",
   description: "Amplify your stories. Reach the world.",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#000000" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${seasonMix.variable} h-full antialiased`}
+      className={`${figtree.variable} ${seasonMix.variable} ${ebGaramond.variable} h-full antialiased bg-black`}
     >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-figtree)]">{children}</body>
     </html>
